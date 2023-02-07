@@ -1,13 +1,155 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: hsl(224, 21%, 14%);
+}
+
+.App {
+  background-color:  hsl(0, 0%, 100%);
+  max-width: 735px;
+}
+
+header {
+  padding: 30px 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container h1 {
+  font-size: 20px;
+}
+
+.notif-number {
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(219, 85%, 26%);
+  padding: 2px 15px;
+  margin-left: 4px;
+  border-radius: 6px;
+}
+
+.header-container button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color:hsl(219, 12%, 42%);
+  cursor: pointer;
+}
+
+.header-container button:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.notifs-section {
+  padding: 0 20px;
+}
+
+.notification {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.notification img {
+  width: 40px;
+  height: 40px;
+}
+
+.info p {
+  font-size: 16px;
+  color: hsl(219, 12%, 42%);
+}
+
+.info .name {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+.info .post {
+  color:  hsl(219, 12%, 42%);
+  font-weight: 800;
+}
+
+.info .timestamp {
+  color: hsl(219, 14%, 63%);
+}
+
+.unread {
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 6px;
+}
+
+.unread-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 25px;
+  background-color: hsl(1, 90%, 64%);
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.group {
+  font-weight: 800;
+  color: hsl(219, 85%, 26%);
+}
+
+.message {
+  color: hsl(219, 12%, 42%);
+  border: solid 1px hsl(205, 33%, 90%);
+  border-radius: 4px;
+  margin: 18px 0 0 0;
+  padding: 15px;
+}
+
+.message:hover {
+  cursor: pointer;
+  background-color: hsl(211, 68%, 94%);
+  border: solid 1px hsl(211, 68%, 94%);
+}
+
+.name,
+.post,
+.group {
+  cursor: pointer;
+}
+
+.name:hover,
+.post:hover,
+.group:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.commented-image {
+  cursor: pointer;
+}
+
+.commented-image:hover {
+  border: solid 3px hsl(211, 68%, 94%);
+  border-radius: 6px;
+}
+
+/* Desktop View */
+@media only screen and (min-width: 376px) {
+  body {
+    background-color: hsl(210, 60%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .App {
+    margin-top: 60px;
+  }
 }
