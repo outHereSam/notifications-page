@@ -1,11 +1,16 @@
-export default function Header() {
+export default function Header({ notifications, resetNotifs }) {
   return (
     <header>
       <div className="header-container">
         <h1>
-          Notifications <span class="notif-number">3</span>
+          Notifications{" "}
+          <span
+            style={{ display: notifications === 0 ? "none" : "inline-block" }}
+            class="notif-number">
+            {notifications}
+          </span>
         </h1>
-        <button>Mark all as read</button>
+        <button onClick={resetNotifs}>Mark all as read</button>
       </div>
     </header>
   );
